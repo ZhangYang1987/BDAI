@@ -1,0 +1,183 @@
+{% extends "bootstrap/base.html" %} 
+<!--<link href="dist/js/bootstrap.min.css" rel="stylesheet">-->
+<head>
+
+
+    {% block title %}工业数据分析平台{% endblock %}
+
+</head>
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation"> 
+	<div class="container"> 
+		<div class="navbar-header"> 
+			<button type="button" class="navbar-toggle" 
+			data-toggle="collapse" data-target=".navbar-collapse"> 
+				<span class="sr-only"> Toggle navigation</span>
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+			</button>
+			<a class="navbar-brand" href="/"> 主页</a> 
+		</div> 
+
+	</div> 
+ </div>
+{%- endblock navbar %}
+{% block content -%}
+<div class="container-fluid">
+<div class="row">
+	<div class="col-xs-12 col-sm-6 col-md-4">
+		<!-- LEFT MENU -->
+    <aside class="main-sidebar">
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <i class="fa fa-user-circle" style="color: white; font-size: 2.5em;"></i>
+          </div>
+          <div class="pull-left info">
+
+         </div>
+       </div>
+
+
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">导航</li>
+		  <li class="treeview">
+          <a href="#">
+            <i class="fa fa-tasks"></i> <span>菜单</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="/upload"><i class="fa fa-upload" ></i>数据集上传</a></li>
+            <li>
+              <a href="#"><i class="fa fa-list"></i>数据集选择
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-file-text"></i>文件类
+                      <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                    </a>
+                  <ul class="treeview-menu">
+                    <li><a href="/db_sel/excel"><i class="fa fa-circle-o"></i>Excel</a></li>
+                    <li><a href="/db_sel/csv"><i class="fa fa-circle-o"></i>CSV</a></li>
+                    <li><a href="/db_sel/txt"><i class="fa fa-circle-o"></i>TXT</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-database"></i>数据库类
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i>Oracle</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i>MySql</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i>MongoDB</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-exchange"></i>数据预处理
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                  <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 缺失值处理</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 异常值处理</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 采样</a></li>
+                  </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-area-chart"></i>数据统计分析
+                 <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+              </a>
+              <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-table"></i> 描述性统计</a></li>
+                    <li><a href="#"><i class="fa fa-bar-chart"></i> 直方图</a></li>
+                    <li><a href="#"><i class="fa fa-line-chart"></i> 相关性计算</a></li>
+                  </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-industry"></i>特征工程
+                 <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+              </a>
+              <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 特征提取</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 特征选择</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 特征降维</a></li>
+                  </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-cogs"></i>机器学习
+                 <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+              </a>
+              <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 有监督学习</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 无监督学习</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 强化学习</a></li>
+                  </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-sort-numeric-asc"></i>概率计算
+                 <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+              </a>
+              <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 单一事件概率</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 多个事件概率</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 二项分布</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 多项分布</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 泊松分布</a></li>
+                  </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-language"></i>文本分析
+                 <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+              </a>
+              <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 分句</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 分词</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> 词频计算</a></li>
+                  </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+</div>
+
+	    <div id="right" class="col-xs-12 col-sm-6 col-md-8">
+        {% block right %}
+        &copy; Copyright 2018 by you.
+        {% endblock %}
+    </div>
+
+</div>
+</div>
+{%- endblock content %}
+
+
+ 
